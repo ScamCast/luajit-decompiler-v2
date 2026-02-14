@@ -47,7 +47,7 @@ def main() -> int:
     out_root.mkdir(parents=True, exist_ok=True)
     failures = 0
     for src in files:
-        relative = src.name if input_path.is_file() else src.relative_to(input_path)
+        relative = Path(src.name) if input_path.is_file() else src.relative_to(input_path)
         dst = out_root / relative.with_suffix(".lua")
         dst.parent.mkdir(parents=True, exist_ok=True)
         if dst.exists() and not args.force_overwrite:
