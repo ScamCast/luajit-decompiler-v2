@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "luajit-decompiler-v2-py"
+version = "0.1.0"
+description = "Python port of LuaJIT decompiler v2"
+requires-python = ">=3.11"
+
+[project.scripts]
+luajit-decompiler-v2-py = "luajit_decompiler_v2.cli:main"
